@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "nuka-carousel": "^5.5.1"
   }
 }
