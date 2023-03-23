@@ -2,16 +2,17 @@ import { MDBCarousel, MDBCarouselItem, } from 'mdb-react-ui-kit';
 import Navigation from "./Components/Navigation/Navigation";
 import Footer from "./Components/Footer";
 
+
+
 function Home(){
 
     return(
         <>
-            <div><Navigation/></div>
             <MDBCarousel showControls showIndicators dark fade>
             <MDBCarouselItem
             className='w-100 d-block'
             itemId={1}
-            src='https://mdbootstrap.com/img/Photos/Slides/img%20(19).jpg'
+            img src='https://images.unsplash.com/photo-1559841644-08984562005a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkc2hlZXR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
             alt='...'
             >
             <h5>First slide label</h5>
@@ -20,7 +21,7 @@ function Home(){
             <MDBCarouselItem
             className='w-100 d-block'
             itemId={2}
-            src='https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg'
+            src='https://plus.unsplash.com/premium_photo-1664443944871-40510cee240f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmVkc2hlZXR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
             alt='...'
             >
             <h5>Second slide label</h5>
@@ -30,7 +31,7 @@ function Home(){
             <MDBCarouselItem
             className='w-100 d-block'
             itemId={3}
-            src='https://mdbootstrap.com/img/Photos/Slides/img%20(40).jpg'
+            src='https://images.unsplash.com/photo-1631008790544-16bcb9ee05b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHNoZWV0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60'
             alt='...'
             >
             <h5>Third slide label</h5>
