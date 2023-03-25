@@ -23,7 +23,7 @@ public class Products {
     private String material;
 
     private double price;
-    private List<String> photos;
+    private List<byte[]> photos;
 
 
 
