@@ -94,10 +94,10 @@ export default function Footer() {
                             </p>
                             <p>
                                 <MDBIcon icon="envelope" className="me-3" />
-                                srilakshmipriya@gmail.com
+                                srilakshmipriya1603@gmail.com
                             </p>
                             <p>
-                                <MDBIcon icon="phone" className="me-3" /> +91 9842650637
+                                <MDBIcon icon="phone" className="me-3" />+91 9842650637
                             </p>
                         </MDBCol>
                     </MDBRow>
