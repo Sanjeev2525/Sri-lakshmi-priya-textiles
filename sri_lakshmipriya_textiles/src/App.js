@@ -21,12 +21,12 @@ function App(){
             console.log(err);
         }
     }
-    const getProductData = async (product) => {
+    const getProduct = async (product) => {
 
         try
         {
             const response = await api.get(`/api/v1/products/${product}`);
-
+            console.log(response.data);
             const singleProduct = response.data;
 
             setProduct(singleProduct);
@@ -49,7 +49,7 @@ function App(){
     return(
         <Routes>
             <Route path="/" element={<Home products={products}/>} />
-            <Route path="/collections" element={<Collections/>}/>
+            <Route path="/products" element={<Collections/>}/>
             <Route path="/about" element={<About/>}/>
         </Routes>
 

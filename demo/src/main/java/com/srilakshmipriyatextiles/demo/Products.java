@@ -1,6 +1,7 @@
 package com.srilakshmipriyatextiles.demo;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
@@ -13,6 +14,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Products {
 
     @Id
@@ -21,12 +23,7 @@ public class Products {
     private String name;
     private String size;
     private String material;
-
     private double price;
-    private List<String> photos;
-
-
-
-
+    private byte[] photos;
 
 }

@@ -1,18 +1,89 @@
 import Navigation from "./Components/Navigation/Navigation";
 import Footer from "./Components/Footer";
 
-const Collections = ()=>{
-    return(
+import React from 'react';
+import {
+    MDBCard,
+    MDBCardImage,
+    MDBCardBody,
+    MDBCardTitle,
+    MDBCardText,
+    MDBRow,
+    MDBCol
+} from 'mdb-react-ui-kit';
 
-            <>
-                <Navigation/>
-                <h1>Collections</h1>
-                <div><Footer/></div>
-            </>
-
-
-
+export default function Collections() {
+    return (
+        <>
+        <Navigation/>
+        <MDBRow className='row-cols-1 row-cols-md-2 g-4'>
+            <MDBCol>
+                <MDBCard>
+                    <MDBCardImage
+                        src='https://mdbootstrap.com/img/new/standard/city/041.webp'
+                        alt='...'
+                        position='top'
+                    />
+                    <MDBCardBody>
+                        <MDBCardTitle>Card title</MDBCardTitle>
+                        <MDBCardText>
+                            This is a longer card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.
+                        </MDBCardText>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBCol>
+            <MDBCol>
+                <MDBCard>
+                    <MDBCardImage
+                        src='https://mdbootstrap.com/img/new/standard/city/042.webp'
+                        alt='...'
+                        position='top'
+                    />
+                    <MDBCardBody>
+                        <MDBCardTitle>Card title</MDBCardTitle>
+                        <MDBCardText>
+                            This is a longer card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.
+                        </MDBCardText>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBCol>
+            <MDBCol>
+                <MDBCard>
+                    <MDBCardImage
+                        src='https://mdbootstrap.com/img/new/standard/city/043.webp'
+                        alt='...'
+                        position='top'
+                    />
+                    <MDBCardBody>
+                        <MDBCardTitle>Card title</MDBCardTitle>
+                        <MDBCardText>
+                            This is a longer card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.
+                        </MDBCardText>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBCol>
+            <MDBCol>
+                <MDBCard>
+                    <MDBCardImage
+                        src='https://mdbootstrap.com/img/new/standard/city/044.webp'
+                        alt='...'
+                        position='top'
+                    />
+                    <MDBCardBody>
+                        <MDBCardTitle>Card title</MDBCardTitle>
+                        <MDBCardText>
+                            This is a longer card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.
+                        </MDBCardText>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBCol>
+        </MDBRow>
+        <Footer/>
+        </>
     );
 }
 
-export default Collections;
