@@ -26,21 +26,14 @@ function App(){
         try
         {
             const response = await api.get(`/api/v1/products/${product}`);
-
             const singleProduct = response.data;
-
             setProduct(singleProduct);
-
-
-
         }
         catch (error)
         {
             console.error(error);
         }
-
     }
-
     useEffect(() => {
         getProducts();
     },[])
