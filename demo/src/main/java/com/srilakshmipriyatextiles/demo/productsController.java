@@ -38,7 +38,7 @@ public class productsController {
         return new ResponseEntity<>(service.findProductByType(product),HttpStatusCode.valueOf(200));
     }
 
-   @PostMapping
+    @PostMapping
     public ResponseEntity<?> uploadProducts(@RequestParam() MultipartFile file,String product,String name,String size,String material,double price) throws IOException {
         String uploadedProduct = productService.postProduct(file,product,name,size,material,price);
         return ResponseEntity.status(HttpStatus.OK)

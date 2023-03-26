@@ -2,6 +2,7 @@ package com.srilakshmipriyatextiles.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -20,14 +21,16 @@ public class productService {
 
 
 
+
+
     public String postProduct(MultipartFile image,String product,String name,String size, String material ,double price) throws IOException {
 
         Products products = productRepository.save(Products.builder()
-                        .product(product)
-                        .price(price)
-                        .size(size)
-                        .material(material)
-                        .name(name)
+                .product(product)
+                .price(price)
+                .size(size)
+                .material(material)
+                .name(name)
                 .photos(ImageUtils.compressImage(image.getBytes())).build());
         if (products!=null) {
             return "file uploaded successfully : " + image.getOriginalFilename();
