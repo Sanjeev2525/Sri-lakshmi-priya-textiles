@@ -26,5 +26,7 @@ public class Products {
     private List<String> photos;
 
 
-}
 
+
+
+}

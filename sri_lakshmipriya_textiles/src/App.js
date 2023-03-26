@@ -7,8 +7,8 @@ import About from "./About";
 import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
 function App(){
-    const [products, setProducts] = useState([]);
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState();
+    const [product, setProduct] = useState();
     const getProducts = async () =>{
         try
         {
@@ -22,7 +22,7 @@ function App(){
         }
     }
     const getProductData = async (product) => {
-    
+
         try
         {
             const response = await api.get(`/api/v1/products/${product}`);
