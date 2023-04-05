@@ -1,14 +1,16 @@
 import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Components/Navigation/Navigation';
+import './App.css';
 import Home from "./Home";
 import Collections from "./Collections";
 import About from "./About";
+import SingleProduct from "./Components/SingleProduct";
 import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
 function App(){
     const [products, setProducts] = useState();
-    const [product, setProduct] = useState();
+   
     const getProducts = async () =>{
         try
         {
@@ -21,19 +23,7 @@ function App(){
             console.log(err);
         }
     }
-    const getProductData = async (product) => {
-
-        try
-        {
-            const response = await api.get(`/api/v1/products/${product}`);
-            const singleProduct = response.data;
-            setProduct(singleProduct);
-        }
-        catch (error)
-        {
-            console.error(error);
-        }
-    }
+    
     useEffect(() => {
         getProducts();
     },[])
@@ -41,11 +31,11 @@ function App(){
 
     return(
         <Routes>
-            <Route path="/" element={<Home products={products}/>} />
-            <Route path="/products" element={<Collections/>}/>
+            <Route path="/" element={<Home/>} />
+            <Route path="/products" element={<Collections products={products}/>}/>
+            <Route path="/products/:productT" element={<SingleProduct/>}/>
             <Route path="/about" element={<About/>}/>
         </Routes>
-
     );
 }
 
