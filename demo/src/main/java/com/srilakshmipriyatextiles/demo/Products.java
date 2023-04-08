@@ -24,6 +24,6 @@ public class Products {
     private String size;
     private String material;
     private double price;
-    private byte[] photos;
+    private String photos;
 
 }

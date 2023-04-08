@@ -22,7 +22,7 @@ public class productService {
 
 
 
-    public String postProduct(MultipartFile image,String product,String name,String size, String material ,double price) throws IOException {
+    public String postProduct(String product,String name,String size, String material ,double price,String photos) throws IOException {
 
         Products products = productRepository.save(Products.builder()
                 .product(product)
@@ -30,16 +30,16 @@ public class productService {
                 .size(size)
                 .material(material)
                 .name(name)
-                .photos(ImageUtils.compressImage(image.getBytes())).build());
+                .photos(photos).build());
         if (products!=null) {
-            return "file uploaded successfully : " + image.getOriginalFilename();
+            return "Product uploaded successfully : ";
         }
         return null;
     }
 
-    public byte[] downloadImage(String fileName){
-        Optional<Products> dbImageData = productRepository.findById(fileName);
-        byte[] photos=ImageUtils.decompressImage(dbImageData.get().getPhotos());
-        return photos;
-    }
+//    public byte[] downloadImage(String fileName){
+//        Optional<Products> dbImageData = productRepository.findById(fileName);
+//        byte[] photos=ImageUtils.decompressImage(dbImageData.get().getPhotos());
+//        return photos;
+//    }
 }

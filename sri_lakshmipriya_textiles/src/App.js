@@ -6,14 +6,16 @@ import About from "./About";
 import SingleProduct from "./Components/SingleProduct";
 import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
+import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 function App(){
-    const [products, setProducts] = useState();
+    const [products, setProducts] = useState([]);
    
     const getProducts = async () =>{
         try
         {
             const response = await api.get("/api/v1/products");
-            console.log(response.data);
             setProducts(response.data);
         }
         catch(err)
@@ -33,6 +35,8 @@ function App(){
             <Route path="/products" element={<Collections products={products}/>}/>
             <Route path="/products/:productT" element={<SingleProduct/>}/>
             <Route path="/about" element={<About/>}/>
+            <Route path="/login" element={<Login/>}/>
+		    <Route path="/admin" element={<Dashboard/>} />
         </Routes>
     );
 }

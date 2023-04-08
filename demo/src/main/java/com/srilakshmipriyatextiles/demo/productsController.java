@@ -19,8 +19,8 @@ public class productsController {
     @Autowired
     private productService productService;
     @GetMapping
-    public ResponseEntity<List<Products>> getAllProducts(){
-        return new ResponseEntity<>(productService.allProducts(), HttpStatusCode.valueOf(200));
+    public ResponseEntity<Products> getAllProducts(){
+        return new ResponseEntity(productService.allProducts(), HttpStatusCode.valueOf(200));
     }
 
     /*@GetMapping("/{product}")
@@ -34,13 +34,13 @@ public class productsController {
     @Autowired
     private productService service;
     @GetMapping("/{product}")
-    public ResponseEntity<Optional<List<Products>>> getSingleProduct(@PathVariable String product){
-        return new ResponseEntity<>(service.findProductByType(product),HttpStatusCode.valueOf(200));
+    public ResponseEntity<Optional<List>> getSingleProduct(@PathVariable String product){
+        return new ResponseEntity(service.findProductByType(product),HttpStatusCode.valueOf(200));
     }
 
     @PostMapping
-    public ResponseEntity<?> uploadProducts(@RequestParam() MultipartFile file,String product,String name,String size,String material,double price) throws IOException {
-        String uploadedProduct = productService.postProduct(file,product,name,size,material,price);
+    public ResponseEntity<?> uploadProducts(@RequestParam() String photos,String product,String name,String size,String material,double price) throws IOException {
+        String uploadedProduct = productService.postProduct(product,name,size,material,price,photos);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(uploadedProduct);
     }
