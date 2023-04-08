@@ -32,7 +32,7 @@ public class productService {
                 .name(name)
                 .photos(photos).build());
         if (products!=null) {
-            return "Product uploaded successfully : ";
+            return "Product added successfully";
         }
         return null;
     }
