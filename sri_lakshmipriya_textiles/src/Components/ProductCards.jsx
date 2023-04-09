@@ -13,12 +13,15 @@ import {
     MDBBtn,
   } from "mdb-react-ui-kit";
 import "./Product.css";
+import Loader from "./Loader";
 
 
 export default function ProductCards(){
-    
+  
   const {productT}=useParams();
-    const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState([]);
+  const [loading,setLoading] = useState(false);
+
     useEffect(() => {
       const getProduct = async (productT) => {
 
@@ -28,6 +31,7 @@ export default function ProductCards(){
             const singleProduct = response.data;
             setProduct(singleProduct);
             // console.log(singleProduct);
+            setLoading(true);
         }
         catch (error)
         {
@@ -35,7 +39,7 @@ export default function ProductCards(){
         }};
         getProduct(productT);
     },[productT])
-    
+
     
     const ProductCard = product.map(({name,price,photos})=>
     <div key={product.id}>
@@ -125,8 +129,9 @@ export default function ProductCards(){
     </div>
         );
         return(
-            <>
-            <>{ProductCard}</>
-            </>);
-            
-        }
+        <>{loading ? product.map(product=>{
+          return <>{ProductCard}</>
+        }):<Loader/>}
+        
+        </>);
+      } 
