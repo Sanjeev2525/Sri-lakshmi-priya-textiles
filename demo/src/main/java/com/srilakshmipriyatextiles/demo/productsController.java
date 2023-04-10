@@ -18,6 +18,7 @@ public class productsController {
 
     @Autowired
     private productService productService;
+
     @GetMapping
     public ResponseEntity<Products> getAllProducts(){
         return new ResponseEntity(productService.allProducts(), HttpStatusCode.valueOf(200));
