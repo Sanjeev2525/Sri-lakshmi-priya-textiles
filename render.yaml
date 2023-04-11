@@ -3,19 +3,10 @@ services:
   - type: web
     name: backend
     env: docker
-    build:
-      context: demo
-      dockerfile: Dockerfile
-    ports:
-      - 8080:8080
+    dockerfilePath: ./demo/Dockerfile
 
   - type: web
     name: frontend
     env: docker
-    build:
-      context: FRONT-END
-      dockerfile: Dockerfile
-    ports:
-      - 80:3000
-    depends_on:
-      - backend
+    dockerfilePath: ./FRONT-END/Dockerfile
+
