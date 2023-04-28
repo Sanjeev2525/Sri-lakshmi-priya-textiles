@@ -2,6 +2,8 @@ import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { MenuItem } from '@mui/material';
+import { Link} from 'react-router-dom';
 export default function Footer() {
     return (
         <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
@@ -38,50 +40,44 @@ export default function Footer() {
 
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-                            <p>
-                                <a href='#!' className='text-reset'>
+                            <Link to="/products/bedsheet" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
                                     Bedsheets
-                                </a>
-                            </p>
-                            <p>
-                                <a href='#!' className='text-reset'>
+                                    </MenuItem>
+                             </Link>
+                
+                             <Link to="/products/bedspread" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
                                     BedSpreads
-                                </a>
-                            </p>
-                            <p>
-                                <a href='#!' className='text-reset'>
+                                    </MenuItem>
+                             </Link>
+                             <Link to="/products/pillow" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
                                     Pillow Covers
-                                </a>
-                            </p>
-                            <p>
-                                <a href='#!' className='text-reset'>
+                                    </MenuItem>
+                             </Link>
+                             <Link to="/products/mat" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
                                     Mats
-                                </a>
-                            </p>
+                                    </MenuItem>
+                             </Link>
                         </MDBCol>
 
                         <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Links</h6>
-                            <p>
-                                <a href='/' className='text-reset'>
-                                    Home
-                                </a>
-                            </p>
-                            <p>
-                                <a href='/collections' className='text-reset'>
-                                    Collections
-                                </a>
-                            </p>
-                            <p>
-                                <a href='about' className='text-reset'>
+                            
+                            <Link to="/" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
+                              Home
+                                    </MenuItem>
+                                    </Link>
+                            
+                           
+                            <Link to="/products" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
+                            Collections
+                                    </MenuItem>
+                        </Link>
+                            <Link to="/about" style={{ textDecoration: 'none' }}><MenuItem style={{paddingLeft: 0}}>
                                     About Us
-                                </a>
-                            </p>
-                            <p>
-                                <a href='#!' className='text-reset'>
-                                    Help
-                                </a>
-                            </p>
+                        </MenuItem>
+                        </Link>
+                           
+    
                         </MDBCol>
 
                         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>

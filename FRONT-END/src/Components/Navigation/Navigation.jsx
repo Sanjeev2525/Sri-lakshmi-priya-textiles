@@ -7,7 +7,7 @@ import { Link} from 'react-router-dom';
 
 const Navigation = ()=> {
     return (<>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" expand="md" collapseOnSelect ='top' variant='dark'>
             <Container>
                 <Navbar.Brand href="/">
                     Sri Lakshmi Priya textiles

@@ -12,6 +12,7 @@ function Post() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    e.stopPropagation();
     try {
       const bodyFormData = new FormData();
       bodyFormData.append("product", product);
@@ -27,17 +28,18 @@ function Post() {
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
       });
-      
+
       if (res.status === 200) {
+        setMessage("Product created successfully");
+        // Reset state variables
         setProduct("");
         setName("");
         setSize("");
         setMaterial("");
         setPrice("");
         setPhotos("");
-        setMessage("Product created successfully");
       } else {
-        setMessage("Some error occured");
+        setMessage("Some error occurred");
       }
     } catch (err) {
       console.log(err);

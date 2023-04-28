@@ -8,7 +8,6 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardImage,
-    MDBIcon,
     MDBRipple,
     MDBBtn,
   } from "mdb-react-ui-kit";
@@ -70,14 +69,9 @@ export default function ProductCards(){
                 </MDBCol>
                 <MDBCol md="6">
                   <h5>{name}</h5>
-                  <div className="d-flex flex-row">
-                    <div className="text-danger mb-1 me-2">
-                      <MDBIcon fas icon="star" />
-                      <MDBIcon fas icon="star" />
-                      <MDBIcon fas icon="star" />
-                    </div>
+                  {/* <div className="d-flex flex-row">
                     <span>50</span>
-                  </div>
+                  </div> */}
                   <div className="mt-1 mb-0 text-muted small">
                     <span>100% cotton</span>
                     <span className="text-primary"> • </span>
@@ -110,14 +104,14 @@ export default function ProductCards(){
                   <div className="d-flex flex-row align-items-center mb-1">
                     <h4 className="mb-1 me-1">₹ {price}</h4>
                   </div>
-                  <h6 className="text-success">Free shipping</h6>
+                  <h6 className="text-success">Available</h6>
                   <div className="d-flex flex-column mt-4">
                     <MDBBtn color="primary" size="sm">
                       Details
                     </MDBBtn>
-                    <MDBBtn outline color="primary" size="sm" className="mt-2">
+                    {/* <MDBBtn outline color="primary" size="sm" className="mt-2">
                       Add to wish list
-                    </MDBBtn>
+                    </MDBBtn> */}
                   </div>
                 </MDBCol>
               </MDBRow>
@@ -129,9 +123,7 @@ export default function ProductCards(){
     </div>
         );
         return(
-        <>{loading ? product.map(product=>{
-          return <>{ProductCard}</>
-        }):<Loader/>}
-        
+          <>
+          {loading ? ProductCard : <Loader />}
         </>);
       } 
