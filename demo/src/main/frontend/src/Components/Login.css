@@ -1,0 +1,66 @@
+
+/* Component.css */
+
+.component-container {
+    background-image: url('https://wallpaperaccess.com/full/16692.jpg');
+    background-size: cover;
+    /* Add any additional background-related styles as needed */
+  }
+  
+  .component-content {
+    /* Add any styles specific to the content area */
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    padding: 8px;
+  }
+/* FormStyles.css */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(58, 125, 147);
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Border radius for the container */
+  box-shadow: 0 2px 4px rgba(228, 6, 6, 0.1);
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+.form-container span{
+  color: #45a049;
+  text-align: center;
+}
+
+.form-container label{
+  color: rgb(191, 209, 54);
+}
+  

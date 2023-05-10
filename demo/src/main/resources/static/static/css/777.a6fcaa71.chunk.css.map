@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/777.a6fcaa71.chunk.css","mappings":"AAAA,KACI,qBACF,CAEA,4BACE,sBACE,0BACF,CACF","sources":["Components/Product.css"],"sourcesContent":["body {\r\n    background-color: #eee;\r\n  }\r\n  \r\n  @media (max-width: 767.98px) {\r\n    .border-sm-start-none {\r\n      border-left: none !important;\r\n    }\r\n  }"],"names":[],"sourceRoot":""}

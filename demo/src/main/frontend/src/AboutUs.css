@@ -1,0 +1,57 @@
+.about-us {
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://www.nobroker.in/blog/wp-content/uploads/2023/02/Small-Cloth-Shop-Interior-Designs-Ideas.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  .about-us h1, .about-us p {
+    /* ... other styles */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow with a slight blur */
+  }
+  
+  
+  .about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;    
+    color: rgb(108, 77, 202);
+  }
+  
+  .about-us p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: rgb(245, 138, 31);
+  }
+
+  
+  
+  .animated-component {
+    margin-top: 40px;
+  }
+  
+  .animated-component h3 {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+  
