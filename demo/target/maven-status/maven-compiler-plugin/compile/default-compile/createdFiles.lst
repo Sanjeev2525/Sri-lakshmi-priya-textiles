@@ -3,5 +3,6 @@ com\srilakshmipriyatextiles\demo\productsController.class
 com\srilakshmipriyatextiles\demo\Application.class
 com\srilakshmipriyatextiles\demo\productService.class
 com\srilakshmipriyatextiles\demo\ImageUtils.class
+com\srilakshmipriyatextiles\demo\ClientForwardController.class
 com\srilakshmipriyatextiles\demo\productRepository.class
 com\srilakshmipriyatextiles\demo\Products$ProductsBuilder.class

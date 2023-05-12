@@ -1,0 +1,17 @@
+/* dashboard.css */
+
+.logout-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .dashcontainer{
+    height: 125vh;
+  }

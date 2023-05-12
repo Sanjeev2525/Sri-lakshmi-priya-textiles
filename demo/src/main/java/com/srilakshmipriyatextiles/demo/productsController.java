@@ -11,14 +11,16 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin
+
 @RestController
 @RequestMapping("/api/v1/products")
+@CrossOrigin(origins = "*")
 public class productsController {
 
     @Autowired
     private productService productService;
 
+    @CrossOrigin(origins = "*")
     @GetMapping
     public ResponseEntity<Products> getAllProducts(){
         return new ResponseEntity(productService.allProducts(), HttpStatusCode.valueOf(200));
@@ -34,6 +36,8 @@ public class productsController {
 
     @Autowired
     private productService service;
+
+    @CrossOrigin(origins = "*")
     @GetMapping("/{product}")
     public ResponseEntity<Optional<List>> getSingleProduct(@PathVariable String product){
         return new ResponseEntity(service.findProductByType(product),HttpStatusCode.valueOf(200));
