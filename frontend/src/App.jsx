@@ -12,6 +12,7 @@ import {useState, useEffect} from 'react';
 // import Login from "./Components/Login";
 import Dashboard from "./Components/Dashboard";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Orders from "./Components/Orders";
 
 
 function App(){
@@ -41,6 +42,7 @@ function App(){
             <Route path="/" element={<Home/>} />
             <Route path="/products" element={<Collections products={products}/>}/>
                 <Route path="/products/:productT" element={<SingleProduct/>}/>
+                    <Route path="/products/:productT/:item" element={<div style={{ backgroundImage: "url('https://wallpaperaccess.com/full/16692.jpg')" }}><Orders/></div>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/login" element={<div style={{ backgroundImage: "url('https://wallpaperaccess.com/full/16692.jpg')" }}><Login/></div>}/>
 		    <Route path="/admin" element={<Dashboard/>} />

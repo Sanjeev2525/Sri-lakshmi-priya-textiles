@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import './dashboard.css';
 import { useNavigate } from "react-router-dom";
 import Post from "./Post";

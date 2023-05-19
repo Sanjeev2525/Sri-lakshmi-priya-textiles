@@ -2,7 +2,7 @@ import React from 'react';
 import { emailValidator, passwordValidator} from './regexValidator'
 import {useNavigate} from 'react-router-dom';
 import Navigation from "./Navigation/Navigation";
-import './Login.css'
+import './Login.css';
 import {
 	MDBFooter,
 	MDBContainer,

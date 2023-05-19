@@ -43,6 +43,10 @@ public class productsController {
         return new ResponseEntity(service.findProductByType(product),HttpStatusCode.valueOf(200));
     }
 
+    @GetMapping("/{product}/{item}")
+    public ResponseEntity<Optional>getOneProduct( @PathVariable String product,@PathVariable String item){
+        return new ResponseEntity<>(service.findProductByName(item),HttpStatusCode.valueOf(200));
+    }
     @PostMapping
     public ResponseEntity<?> uploadProducts(@RequestParam() String photos,String product,String name,String size,String material,double price) throws IOException {
         String uploadedProduct = productService.postProduct(product,name,size,material,price,photos);
